@@ -12,17 +12,17 @@ public class Algorithms {
     public static void main(String[] args) throws IOException {
         Scanner InCMD = new Scanner(System.in);
         List<Integer> array = new ArrayList<Integer>();
-        System.out.println("\nРазработанная программа предназначена для сортировки целых чисел " +
-                "\nпо возрастанию, с использованием алгоритмов на сравнениях:  \n"       +
-                "1) быстрая сортировка\n" +
-                "2) сортировка Шелла\n" +
-                "3) сортировка слиянием. ");
+        System.out.println("\nР Р°Р·СЂР°Р±РѕС‚Р°РЅРЅР°СЏ РїСЂРѕРіСЂР°РјРјР° РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅР° РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё С†РµР»С‹С… С‡РёСЃРµР» " +
+                "\nРїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ, СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј Р°Р»РіРѕСЂРёС‚РјРѕРІ РЅР° СЃСЂР°РІРЅРµРЅРёСЏС…:  \n"       +
+                "1) Р±С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°\n" +
+                "2) СЃРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р°\n" +
+                "3) СЃРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј. ");
         boolean exit1 = false;
         while (!exit1) {
-            System.out.println("\n\n-------------  МЕНЮ  -------------\n" +
-                    "Ввести данные для сортировки (нажать кнопку z)\n" +
-                    "Выполнить сортировку (нажмите клавишу s)\n" +
-                    "Завершить программу (нажмите клавишу q)\n");
+            System.out.println("\n\n-------------  РњР•РќР®  -------------\n" +
+                    "Р’РІРµСЃС‚Рё РґР°РЅРЅС‹Рµ РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё (РЅР°Р¶Р°С‚СЊ РєРЅРѕРїРєСѓ z)\n" +
+                    "Р’С‹РїРѕР»РЅРёС‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ (РЅР°Р¶РјРёС‚Рµ РєР»Р°РІРёС€Сѓ s)\n" +
+                    "Р—Р°РІРµСЂС€РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ (РЅР°Р¶РјРёС‚Рµ РєР»Р°РІРёС€Сѓ q)\n");
             String in = InCMD.nextLine();
             switch (in) {
                 case "z":
@@ -39,28 +39,28 @@ public class Algorithms {
                     Sorting(arr);
                     break;
                 case "q":
-                    System.out.println("Файлы с результатами работ сортировок смотрите в папке 'Результаты'");
-                    System.out.println("Работа программы завершена");
+                    System.out.println("Р¤Р°Р№Р»С‹ СЃ СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё СЂР°Р±РѕС‚ СЃРѕСЂС‚РёСЂРѕРІРѕРє СЃРјРѕС‚СЂРёС‚Рµ РІ РїР°РїРєРµ 'Р РµР·СѓР»СЊС‚Р°С‚С‹'");
+                    System.out.println("Р Р°Р±РѕС‚Р° РїСЂРѕРіСЂР°РјРјС‹ Р·Р°РІРµСЂС€РµРЅР°");
                     exit1 = true;
                     break;
             }
         }
     }
-    //формирование массива
+    //С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР°
     public static void formation_array(List<Integer> array) throws FileNotFoundException {
         Scanner InCMD = new Scanner(System.in);
         Random rnd = new Random();
         array.clear();
-        System.out.println("Введите номер способа формирования массива чисел\n" +
-                "a Рандомный способ\n" +
-                "b Текстовый файл\n");
+        System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃРїРѕСЃРѕР±Р° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІР° С‡РёСЃРµР»\n" +
+                "a Р Р°РЅРґРѕРјРЅС‹Р№ СЃРїРѕСЃРѕР±\n" +
+                "b РўРµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р»\n");
         String in = InCMD.nextLine();
         switch (in) {
             case "a":
                 System.out.println("------------------------------------------------------------");
-                System.out.println("Введите количество элементов: ");
+                System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ: ");
                 int n = InCMD.nextInt();
-                System.out.println("Исходный массив чисел:");
+                System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                 for (int i = 0; i < n; i++) {
                     array.add(i, rnd.nextInt(n * 8) - 30);
                     System.out.print(array.get(i) + " ");
@@ -68,11 +68,11 @@ public class Algorithms {
                 break;
             case "b":
                 try {
-                    System.out.print("Введите имя файла (файл должен находится папке 'Файлы для сортировки'): ");
+                    System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ С„Р°Р№Р»Р° (С„Р°Р№Р» РґРѕР»Р¶РµРЅ РЅР°С…РѕРґРёС‚СЃСЏ РїР°РїРєРµ 'Р¤Р°Р№Р»С‹ РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё'): ");
                     String fname = InCMD.nextLine();
-                    File file = new File("Файлы для сортировки\\" + fname);
+                    File file = new File("Р¤Р°Р№Р»С‹ РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё\\" + fname);
                     Scanner scanner = new Scanner(file);
-                    System.out.println("Исходный массив чисел:");
+                    System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                     while (scanner.hasNext()) {
                         if (scanner.hasNextInt()) {
                             int element = scanner.nextInt();
@@ -83,22 +83,22 @@ public class Algorithms {
                         }
                     }
                 } catch (Exception e) {
-                    System.out.println("Файл не найден!");
+                    System.out.println("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ!");
                 }
                 break;
         }
     }
 
-    //сортировка массива
+    //СЃРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°
     public static void Sorting(int[] arr) throws IOException {
         boolean exit = false;
         if (arr.length == 0) {
-            System.out.println("Нет данных для сортировки, введите данные для сортировки");
-            return;//завершить выполнение, если длина массива равна 0
+            System.out.println("РќРµС‚ РґР°РЅРЅС‹С… РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё, РІРІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё");
+            return;//Р·Р°РІРµСЂС€РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ, РµСЃР»Рё РґР»РёРЅР° РјР°СЃСЃРёРІР° СЂР°РІРЅР° 0
         }
         Date date = new Date() ;
         SimpleDateFormat dateObject = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss") ;
-        File filePath = new File("Результаты");
+        File filePath = new File("Р РµР·СѓР»СЊС‚Р°С‚С‹");
         filePath.mkdir();
         while (!exit) {
             int[] For_sort_arr = new int[arr.length];
@@ -106,110 +106,110 @@ public class Algorithms {
                 For_sort_arr[i] = arr[i];
             }
             System.out.println("\n------------------------------------------------------------");
-            System.out.println("Введите номер сортировки, которую хотите выполнить\n" +
-                    "1 Быстрая сортировка\n" +
-                    "2 Сортировка Шелла\n" +
-                    "3 Сортировка слиянием \n" +
-                    "Выйти в меню (нажмите клавишу m)\n" +
-                    "Завершить программу (нажмите клавишу q)\n");
+            System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃРѕСЂС‚РёСЂРѕРІРєРё, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ РІС‹РїРѕР»РЅРёС‚СЊ\n" +
+                    "1 Р‘С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°\n" +
+                    "2 РЎРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р°\n" +
+                    "3 РЎРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј \n" +
+                    "Р’С‹Р№С‚Рё РІ РјРµРЅСЋ (РЅР°Р¶РјРёС‚Рµ РєР»Р°РІРёС€Сѓ m)\n" +
+                    "Р—Р°РІРµСЂС€РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ (РЅР°Р¶РјРёС‚Рµ РєР»Р°РІРёС€Сѓ q)\n");
             Scanner In = new Scanner(System.in);
             String input = In.nextLine();
             switch (input) {
                 case "1":
                     System.out.println("------------------------------------------------------------");
-                    System.out.println("1 Быстрая сортировка");
+                    System.out.println("1 Р‘С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°");
                     int low = 0;
                     int high = For_sort_arr.length - 1;
-                    System.out.println("Исходный массив чисел:");
+                    System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                     System.out.println(Arrays.toString(For_sort_arr));
                     QuickSort(For_sort_arr, low, high);
-                    System.out.println("Отсортированный массив чисел:");
+                    System.out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                     System.out.println(Arrays.toString(For_sort_arr));
                     try{
-                        File file_QS = new File(filePath + "\\Результат - Быстрая сортировка "+dateObject.format(date)+".txt");
-                        file_QS.createNewFile(); //создание файла
-                        PrintWriter out = new PrintWriter(filePath + "\\Результат - Быстрая сортировка "+dateObject.format(date)+".txt", "UTF8");
+                        File file_QS = new File(filePath + "\\Р РµР·СѓР»СЊС‚Р°С‚ - Р‘С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР° "+dateObject.format(date)+".txt");
+                        file_QS.createNewFile(); //СЃРѕР·РґР°РЅРёРµ С„Р°Р№Р»Р°
+                        PrintWriter out = new PrintWriter(filePath + "\\Р РµР·СѓР»СЊС‚Р°С‚ - Р‘С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР° "+dateObject.format(date)+".txt", "UTF8");
                         out.println("------------------------------------------------------------");
-                        out.println("Быстрая сортировка");
-                        out.println("Исходный массив чисел:");
+                        out.println("Р‘С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°");
+                        out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                         out.println(Arrays.toString(arr));
 
-                        out.println("Отсортированный массив чисел:");
+                        out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                         out.println(Arrays.toString(For_sort_arr));
                         out.flush();
                         out.close();
                     } catch (IOException e) {
-                        System.out.println("Ошибка!"); }
+                        System.out.println("РћС€РёР±РєР°!"); }
                     break;
                 case "2":
                     System.out.println("------------------------------------------------------------");
-                    System.out.println("2 Сортировка Шелла");
-                    System.out.println("Исходный массив чисел:");
+                    System.out.println("2 РЎРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р°");
+                    System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                     System.out.println(Arrays.toString(For_sort_arr));
                     shellSort(For_sort_arr);
-                    System.out.println("Отсортированный массив чисел:");
+                    System.out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                     System.out.println(Arrays.toString(For_sort_arr));
                     try{
-                        File file_SS = new File(filePath + "\\Результат - Сортировка Шелла "+dateObject.format(date)+".txt");
-                        file_SS.createNewFile(); //создание файла
-                        PrintWriter out = new PrintWriter(filePath + "\\Результат - Сортировка Шелла "+dateObject.format(date)+".txt", "UTF8");
+                        File file_SS = new File(filePath + "\\Р РµР·СѓР»СЊС‚Р°С‚ - РЎРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р° "+dateObject.format(date)+".txt");
+                        file_SS.createNewFile(); //СЃРѕР·РґР°РЅРёРµ С„Р°Р№Р»Р°
+                        PrintWriter out = new PrintWriter(filePath + "\\Р РµР·СѓР»СЊС‚Р°С‚ - РЎРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р° "+dateObject.format(date)+".txt", "UTF8");
                         out.println("------------------------------------------------------------");
-                        out.println("Сортировка Шелла");
-                        out.println("Исходный массив чисел:");
+                        out.println("РЎРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р°");
+                        out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                         out.println(Arrays.toString(arr));
-                        out.println("Отсортированный массив чисел:");
+                        out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                         out.println(Arrays.toString(For_sort_arr));
                         out.flush();
                         out.close();
                     } catch (IOException e) {
-                        System.out.println("Ошибка!"); }
+                        System.out.println("РћС€РёР±РєР°!"); }
                     break;
                 case "3":
                     System.out.println("------------------------------------------------------------");
-                    System.out.println("3 Сортировка слиянием");
-                    System.out.println("Исходный массив чисел:");
+                    System.out.println("3 РЎРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј");
+                    System.out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                     System.out.println(Arrays.toString(For_sort_arr));
                     mergeSort(For_sort_arr, arr.length);
-                    System.out.println("Отсортированный массив чисел:");
+                    System.out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                     System.out.println(Arrays.toString(For_sort_arr));
                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
                     LocalDateTime dateTime = LocalDateTime.now();
                     String dt = dateTime.format(formatter);
 
                    try{
-                        File file_SlS = new File(filePath + "\\Результат - Сортировка слиянием "+dateObject.format(date)+".txt");
-                        file_SlS.createNewFile(); //создание файла
-                        PrintWriter out = new PrintWriter(filePath + "\\Результат - Сортировка слиянием "+dateObject.format(date)+".txt", "UTF8");
+                        File file_SlS = new File(filePath + "\\Р РµР·СѓР»СЊС‚Р°С‚ - РЎРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј "+dateObject.format(date)+".txt");
+                        file_SlS.createNewFile(); //СЃРѕР·РґР°РЅРёРµ С„Р°Р№Р»Р°
+                        PrintWriter out = new PrintWriter(filePath + "\\Р РµР·СѓР»СЊС‚Р°С‚ - РЎРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј "+dateObject.format(date)+".txt", "UTF8");
                         out.println("------------------------------------------------------------");
-                        out.println("Сортировка слиянием");
-                        out.println("Исходный массив чисел:");
+                        out.println("РЎРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј");
+                        out.println("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                         out.println(Arrays.toString(arr));
-                        out.println("Отсортированный массив чисел:");
+                        out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ С‡РёСЃРµР»:");
                         out.println(Arrays.toString(For_sort_arr));
                         out.flush();
                         out.close();
                     } catch (IOException e) {
-                        System.out.println("Ошибка!"); }
+                        System.out.println("РћС€РёР±РєР°!"); }
                     break;
                 case "m":
                     exit = true;
                     break;
                 case "q":
-                    System.out.println("Файлы с результатами работ сортировок смотрите в папке 'Результаты'");
-                    System.out.println("Работа программы завершена");
+                    System.out.println("Р¤Р°Р№Р»С‹ СЃ СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё СЂР°Р±РѕС‚ СЃРѕСЂС‚РёСЂРѕРІРѕРє СЃРјРѕС‚СЂРёС‚Рµ РІ РїР°РїРєРµ 'Р РµР·СѓР»СЊС‚Р°С‚С‹'");
+                    System.out.println("Р Р°Р±РѕС‚Р° РїСЂРѕРіСЂР°РјРјС‹ Р·Р°РІРµСЂС€РµРЅР°");
                     System.exit(0);
             }
         }
 }
 
-//Быстрая сортировка
+//Р‘С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°
 public static void QuickSort(int[] array, int low, int high) {
         if (low >= high)
-            return;//завершить выполнение если уже нечего делить
-        // выбор опорного элемента
+            return;//Р·Р°РІРµСЂС€РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ РµСЃР»Рё СѓР¶Рµ РЅРµС‡РµРіРѕ РґРµР»РёС‚СЊ
+        // РІС‹Р±РѕСЂ РѕРїРѕСЂРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
         int middle = low + (high - low) / 2;
         int support_element= array[middle];
-        // разделение на два подмассива, которые больше и меньше опорного элемента
+        // СЂР°Р·РґРµР»РµРЅРёРµ РЅР° РґРІР° РїРѕРґРјР°СЃСЃРёРІР°, РєРѕС‚РѕСЂС‹Рµ Р±РѕР»СЊС€Рµ Рё РјРµРЅСЊС€Рµ РѕРїРѕСЂРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
         int i = low, j = high;
         while (i <= j) {
             while (array[i] < support_element) {
@@ -219,21 +219,21 @@ public static void QuickSort(int[] array, int low, int high) {
                 j--;
             }
             if (i <= j) {
-                int temp = array[i];//перестановка элементов
+                int temp = array[i];//РїРµСЂРµСЃС‚Р°РЅРѕРІРєР° СЌР»РµРјРµРЅС‚РѕРІ
                 array[i] = array[j];
                 array[j] = temp;
                 i++;
                 j--;
             }
         }
-        // вызов рекурсии для сортировки левой и правой части
+        // РІС‹Р·РѕРІ СЂРµРєСѓСЂСЃРёРё РґР»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё Р»РµРІРѕР№ Рё РїСЂР°РІРѕР№ С‡Р°СЃС‚Рё
         if (low < j)
             QuickSort(array, low, j);
         if (high > i)
             QuickSort(array, i, high);
 }
 
-//Сортировка Шелла
+//РЎРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р°
 public static void shellSort(int[] array) {
     for(int d = array.length / 2; d > 0; d /= 2) {
         for (int i = d; i < array.length; i++) {
@@ -246,32 +246,32 @@ public static void shellSort(int[] array) {
     }
 }
 
-//Сортировка слиянием
+//РЎРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј
 public static void mergeSort(int[] a, int n) {
         if (n < 2) {
             return;
         }
-        int middle = n / 2;// выбор позиции опорного элемента
+        int middle = n / 2;// РІС‹Р±РѕСЂ РїРѕР·РёС†РёРё РѕРїРѕСЂРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
         int[] left = new int[middle];
         int[] rigth = new int[n - middle];
-        //разделение массива на два подмассива
+        //СЂР°Р·РґРµР»РµРЅРёРµ РјР°СЃСЃРёРІР° РЅР° РґРІР° РїРѕРґРјР°СЃСЃРёРІР°
         for (int i = 0; i < middle; i++) {
             left[i] = a[i];
         }
         for (int i = middle; i < n; i++) {
             rigth[i - middle] = a[i];
         }
-        mergeSort(left, middle); //разделение левого подмассива
-        mergeSort(rigth, n - middle);////разделение правого подмассива
-        // слияние
+        mergeSort(left, middle); //СЂР°Р·РґРµР»РµРЅРёРµ Р»РµРІРѕРіРѕ РїРѕРґРјР°СЃСЃРёРІР°
+        mergeSort(rigth, n - middle);////СЂР°Р·РґРµР»РµРЅРёРµ РїСЂР°РІРѕРіРѕ РїРѕРґРјР°СЃСЃРёРІР°
+        // СЃР»РёСЏРЅРёРµ
         merge(a, left, rigth, middle, n - middle);
 }
-    // слияние
+    // СЃР»РёСЏРЅРёРµ
     public static void merge(int[] a, int[] left_arr, int[] right_arr, int left, int right) {
         int i = 0, j = 0, k = 0;
 
         while (i < left && j < right) {
-            //выбор меньшего элемента
+            //РІС‹Р±РѕСЂ РјРµРЅСЊС€РµРіРѕ СЌР»РµРјРµРЅС‚Р°
             if (left_arr[i] <= right_arr[j]) {
                 a[k++] = left_arr[i++];
             }
@@ -279,7 +279,7 @@ public static void mergeSort(int[] a, int n) {
                 a[k++] = right_arr[j++];
             }
         }
-        //слияние подмассивов в один общий массив
+        //СЃР»РёСЏРЅРёРµ РїРѕРґРјР°СЃСЃРёРІРѕРІ РІ РѕРґРёРЅ РѕР±С‰РёР№ РјР°СЃСЃРёРІ
         while (i < left) {
             a[k++] = left_arr[i++];
         }
